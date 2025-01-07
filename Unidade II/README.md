@@ -54,16 +54,16 @@ Este projeto é uma API desenvolvida com FastAPI que interage com um banco de da
     - `collection_name` (path): Nome da coleção.
     - `query` (query): Filtro de consulta (opcional).
     ```
-    {"name":"Bob"}
-    {"name":{"$regex":"/Bo$/"}}
-    {"age":{"$gt":12}}
-    {"age":{"$gte":12}}
+    /{nome_da_coleção}?query={"name":"Bob"}
+    /{nome_da_coleção}?query={"name":{"$regex":"/Bo$/"}}
+    /{nome_da_coleção}?query={"age":{"$gt":12}}
+    /{nome_da_coleção}?query={"age":{"$gte":12}}
     ```
     - `fields` (query): Campos a serem retornados (opcional).
      ```
-    name #Exibirá apenas nome
-    -name #Não exibirá o nome
-    name,age #Exibirá Nome e Idade
+    /{nome_da_coleção}?fields=name #Exibirá apenas name
+    /{nome_da_coleção}?fields=-name #Não exibirá name
+    /{nome_da_coleção}?fields=name,age #Exibirá name e age
     ```
     - `skip` (query): Número de documentos a pular (opcional).
     - `limit` (query): Número máximo de documentos a retornar (opcional).
