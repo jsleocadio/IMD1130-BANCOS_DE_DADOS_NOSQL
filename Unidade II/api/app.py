@@ -84,7 +84,7 @@ def get_docs(
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"An error occurred: {str(e)}")
 
-@app.get("/{collection_name}/{user_id}", summary="Retrieve a document", description="Retrieve a document by its ID")
+@app.get("/{collection_name}/{doc_id}", summary="Retrieve a document", description="Retrieve a document by its ID")
 def get_document(
     collection_name: str = Path(..., description="Name of the collection to retrieve"),
     doc_id: int = None):
@@ -131,7 +131,7 @@ def create_document(
         logger.error(f"An error occurred: {str(e)}")
         raise HTTPException(status_code=500, detail=f"An error occurred: {str(e)}")
 
-@app.put("/{collection_name}/{user_id}", summary="Update a document", description="Update a document by its ID")
+@app.put("/{collection_name}/{doc_id}", summary="Update a document", description="Update a document by its ID")
 def update_user(
     collection_name: str = Path(..., description="Name of the collection to update"),
     doc_id: int = None,
