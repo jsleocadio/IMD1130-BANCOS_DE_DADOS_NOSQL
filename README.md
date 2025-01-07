@@ -16,7 +16,7 @@ The importance of NoSQL databases lies in their ability to scale horizontally, d
 
 ## License
 
-The materials in this repository are licensed under the MIT License. For in-depth details, consult the [LICENSE file](README.md).
+The materials in this repository are licensed under the MIT License. For in-depth details, consult the [LICENSE](README.md) file.
 
 ## References
 
