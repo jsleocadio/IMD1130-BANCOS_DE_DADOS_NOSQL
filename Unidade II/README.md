@@ -26,7 +26,7 @@ Este projeto é uma API desenvolvida com FastAPI que interage com um banco de da
 1. Clone o repositório:
      ```bash
      git clone https://github.com/jsleocadio/IMD1130-BANCOS_DE_DADOS_NOSQL.git
-     cd IMD1130-BANCOS_DE_DADOS_NOSQL/Unidade II
+     cd IMD1130-BANCOS_DE_DADOS_NOSQL/Unidade\ II/
      ```
 
 2. Inicie os serviços Docker:
@@ -53,7 +53,18 @@ Este projeto é uma API desenvolvida com FastAPI que interage com um banco de da
 - **Parâmetros**:
     - `collection_name` (path): Nome da coleção.
     - `query` (query): Filtro de consulta (opcional).
+    ```
+    {"name":"Bob"}
+    {"name":{"$regex":"/Bo$/"}}
+    {"age":{"$gt":12}}
+    {"age":{"$gte":12}}
+    ```
     - `fields` (query): Campos a serem retornados (opcional).
+     ```
+    name #Exibirá apenas nome
+    -name #Não exibirá o nome
+    name,age #Exibirá Nome e Idade
+    ```
     - `skip` (query): Número de documentos a pular (opcional).
     - `limit` (query): Número máximo de documentos a retornar (opcional).
 
